@@ -21,7 +21,7 @@ $type = isset($_GET["type"])? $_GET["type"] : "sites";
 
   <meta name="description" content="Search Smartly">
   <meta name="keywords" content="SmartSearch, smartsearch, smart, search, smartboy">
-  <meta name="author" content="Suraj Bahadur">
+  <meta name="author" content="phpmySmartSearch">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="icon" type="image" href="resource/SSL.png">
@@ -35,7 +35,7 @@ $type = isset($_GET["type"])? $_GET["type"] : "sites";
 			<div class="header_content">
 
 				<div class="LOGO_Container">
-					<a href="index.php"><img src="resource/Smart Search LOGO.png" width="40%;"></a>
+					<a href="index.php"><img src="resource/phpmySmartSearch.png" width="40%;"></a>
 				</div>
 				<div class="Search_Container">
 					
@@ -69,15 +69,9 @@ $type = isset($_GET["type"])? $_GET["type"] : "sites";
 			$resultprovider = new SiteResultProvider($con);
 			$numbercount = $resultprovider->getNumResult($key);
 			echo " <p class='resultscount'> $numbercount results found </p>";
-
-
 			echo $resultprovider->getPages(1, 20, $key);
 			 ?>
 			
-
-
-
-
 		</div>
 
 

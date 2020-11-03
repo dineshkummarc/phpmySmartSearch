@@ -5,7 +5,7 @@
 
   <meta name="description" content="Search Smartly">
   <meta name="keywords" content="SmartSearch, smartsearch, smart, search, smartboy">
-  <meta name="author" content="Suraj">
+  <meta name="author" content="phpmySmartSearch">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image" href="resource/SSL.png">
@@ -13,14 +13,14 @@
 
 </head>
 <body>
-<div class="copyright" align="right">Copyright © Suraj bahadur </div>
+<div class="copyright" align="right">Copyright © phpmySmartSearch</div>
 	<div class="wrapper indexpage">
 		
 
 		<div class="main">
 
 		<div class="LOGO_Container">
-			<img src="resource/Smart Search LOGO.png" width="40%;" title="SmartSearch LOGO">
+			<img src="resource/phpmySmartSearch1.png" width="40%;" title="SmartSearch LOGO">
 		</div>
 
 		<div class="Search_Container">
