@@ -11,7 +11,7 @@ $this->con = $con;
 			title LIKE :key OR
 			url LIKE :key OR
 			description LIKE :key OR
-			keyword LIKE :key");
+			keywords LIKE :key");
 		$searchkey = "%" . $key . "%";
 		$query->bindParam(":key", $searchkey);
 		$query->execute();
@@ -25,7 +25,7 @@ $this->con = $con;
 			title LIKE :key OR
 			url LIKE :key OR
 			description LIKE :key OR
-			keyword LIKE :key 
+			keywords LIKE :key 
 			ORDER BY clicks DESC");
 
 
