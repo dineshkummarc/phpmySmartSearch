@@ -8,10 +8,10 @@ $alreadycrawled = array();
 $crawling = array();
 
 
-function insertLinks ( $url, $title, $description, $keyword){
+function insertLinks ( $url, $title, $description, $keywords){
 	global $con;
 
-	$query = $con->prepare("INSERT INTO sites(url, title, description, keyword) VALUES (:url, :title, :description, :keyword)");
+	$query = $con->prepare("INSERT INTO sites(url, title, description, keywords) VALUES (:url, :title, :description, :keywords)");
 	$query -> bindParam(":url", $url);
 	$query -> bindParam(":title", $title);
 	$query -> bindParam(":description", $description);
@@ -64,7 +64,7 @@ function getDetails($url){
 	}
 
 	$description = "";
-	$keyword ="";
+	$keywords ="";
 	$metaArray = $parser->getMeta();
 
 	foreach($metaArray as $meta) {
@@ -79,14 +79,14 @@ function getDetails($url){
 	}
 
 	$description = str_replace("\n", "", $description);
-	$keyword = str_replace("\n", "", $keyword);
+	$keyword = str_replace("\n", "", $keywords);
 
 
 	echo "URL: $url <br>Title: $title <br>Description: $description<br>Keywords: $keywords <br><br>";
 	if(linkExist($url)){
 		echo "$url present";
 	}
-	else if (insertLinks( $url, $title, $description, $keyword)){
+	else if (insertLinks( $url, $title, $description, $keywords)){
 		echo "Success :  $url ";
 	}
 	else {
