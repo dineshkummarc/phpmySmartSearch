@@ -15,7 +15,7 @@ function insertLinks ( $url, $title, $description, $keyword){
 	$query -> bindParam(":url", $url);
 	$query -> bindParam(":title", $title);
 	$query -> bindParam(":description", $description);
-	$query -> bindParam(":keyword", $keyword);
+	$query -> bindParam(":keywords", $keywords);
 	return $query-> execute();
 }
 
@@ -73,7 +73,7 @@ function getDetails($url){
 			$description = $meta->getAttribute("content");
 		}
 
-		if($meta-> getAttribute("name")=="keyword"){
+		if($meta-> getAttribute("name")=="keywords"){
 			$keyword = $meta->getAttribute("content");
 		}
 	}
@@ -82,7 +82,7 @@ function getDetails($url){
 	$keyword = str_replace("\n", "", $keyword);
 
 
-	echo "URL: $url <br>Title: $title <br>Description: $description<br>Keywords: $keyword <br><br>";
+	echo "URL: $url <br>Title: $title <br>Description: $description<br>Keywords: $keywords <br><br>";
 	if(linkExist($url)){
 		echo "$url present";
 	}
